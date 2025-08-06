@@ -1,0 +1,18 @@
+# Ignore class files and build artifacts
+*.class
+*.jar
+*.war
+*.log
+*.tmp
+*.out
+.DS_Store
+
+# IDE folders
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+target/
+bin/
+build/
