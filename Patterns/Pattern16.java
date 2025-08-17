@@ -6,18 +6,15 @@ public class Pattern16 {
     }
 
     static void pattern(int n){
-        for(int row = 1; row <= n; row++){
-            for(int s = 1; s <= 2 * n + 1 - row; s++){
-                System.out.print(" ");
+        for(int row = 0; row < n; row++){
+            for(int s = 0; s < n - row - 1; s++){
+                System.out.print("  ");
             }
-            for(int col = 1; col <= row; col++){
-                if(col == 1 || col == row ){
-                    System.out.print(1 + " ");
-                } else {
-                    System.out.print(row - 1 + " ");
-                }
-                // int atEveryIndex = Math.min(Math.min(row, col), Math.min(n - row, n - col));
-                // System.out.print(atEveryIndex + " ");
+
+            int num = 1;
+            for (int col = 0; col <= row; col++) {
+                System.out.printf("%4d", num);
+                num = num * (row - col) / (col + 1); // Compute binomial coefficient
             }
             System.out.println();
         }
